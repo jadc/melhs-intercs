@@ -1,19 +1,77 @@
-h1 {
-    display: block;
-    position: relative;
-    margin: 5em auto;
-    width: 10em;
-    height: 3em;
-    line-height: 3em;
-    text-align: center;
-    color: white;
-    background-color: black;
-    font-family: sans-serif;
-    border-radius: 3em;
-    animation: rotate 5s infinite linear;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
 }
 
-@keyframes rotate {
-    0% { transform: rotate(0deg) }
-    100% { transform: rotate(360deg) }
+body {
+    background-color: #111;
+}
+
+.content {
+    opacity: 0;
+    max-width: 55em;
+    margin: 1em auto;
+    padding: 1em;
+    color: black;
+    background-color: #eee;
+    font-family: sans-serif;
+    border-radius: 0.5em;
+    box-shadow: 0 0.5em 1em 0 black;
+    animation: fade 500ms ease-out 250ms 1 forwards;
+}
+
+.content header {
+    box-sizing: border-box;
+    margin: 1em;
+    padding: 1em;
+    border-bottom: 1px dotted #aaa;
+    text-align: center;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 1000px) {
+    .modal-content {
+        flex-direction: column;
+    }
+
+    .modal-content .list {
+        margin: 0 auto;
+    }
+}
+
+.modal-content .list {
+    padding: 1em;
+    font-size: 1.25em;
+}
+
+.modal-content .list ul {
+    margin-left: 1em;
+}
+
+.modal-content .container {
+    width: 100%;
+}
+
+.image {
+    display: block;
+    margin: 0 auto;
+    border-radius: 1em;
+    max-width: 80vw;
+    height: 50vw;
+    max-height: 25em;
+    background-image: url(assets/edmonton.jpg);
+    background-size: 100% 100%;
+}
+
+@keyframes fade {
+    0% { transform: translateY(1em); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
 }

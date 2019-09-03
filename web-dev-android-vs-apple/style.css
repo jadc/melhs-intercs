@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Proza+Libre&display=swap');
+
+* {
+    font-family: "Open Sans", sans-serif;
+}
+
+h2 {
+    font-family: "Proza Libre", sans-serif;
+}
+
+body {
+    background-color: #cabfb6;
+}
+
+main {
+    background-color: white;
+    width: 600px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 50px 100px;
+}
+
+img {
+    width: 100%;
+}
+
+hr {
+    margin: 2em 0;
+    border: 1px solid #ccc;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: 0;
+    padding: 0.5em 1.5em;
+    margin: 0.25em;
+    border-radius: 0.5em;
+    font-size: 20px;
+    border: 1px solid transparent;
+}
+
+button:hover {
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+#debate-btn {
+    display: block;
+    margin: 0 auto;
+    background-color: #c9793b;
+}
