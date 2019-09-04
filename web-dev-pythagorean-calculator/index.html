@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Pythagorean Theorem Calculator</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main>
+            <h1>Pythagorean Theorem</h1>
+            <p>For any right triangle with sides <b>a</b> and <b>b</b> and hypotenuse <b>c</b>, the square of the hypotenuse is equal to the sum of the squares of the other two sides.</p>
+            <a target="_blank" href="http://www.etudes.ru/en/etudes/pythagorean-theorem/">
+                <img src="images/Pythagorean-Theorem.jpeg" alt="Pythagorean Theorem Diagram">
+            </a>
+            <div class="calculator">
+                <h2>Pythagorean Calculator</h2>
+                <p>Enter lengths for the two shorter sides of a right triangle. Then click the <span id="inline-calc">Calculate</span> button to determine the length of the hypotenuse.</p>
+                <h2>Inputs</h2>
+                <p>Side a: <input type="number" id="a"></p>
+                <p>Side b: <input type="number" id="b"></p>
+                <button onclick="pytha()">Calculate</button>
+                <h2>Result</h2>
+                <p>The length of the hypotenuse is: <span id="answer">?????</span></p>
+            </div>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
