@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+* {
+    font-family: "Open Sans", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #ccc;
+}
+
+main {
+    background-color: white;
+    display: absolute;
+    margin: 2em auto;
+    width: 50em;
+    box-sizing: border-box;
+    padding: 1em 3em;
+    border-radius: 1em;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 1em;
+    text-align: center;
+    font-variant: small-caps;
+}
+
+h1::after {
+    display: inline-block;
+    position: relative;
+    top: 0.15em;
+    background-color: yellow;
+    width: 1em;
+    height: 1em;
+    content: "";
+    margin: 0 0.5em;
+    background-image: url(images/logo.png);
+    background-size: 100%;
+    border-radius: 10%;
+}
+
+.question {
+    background-color: #eee;
+    padding: 2em 1em;
+    border-radius: 1em;
+    line-height: 2em;
+    margin: 1em auto;
+    max-width: 75%;
+}
+
+pre::before {
+    content: "> ";
+    color: #777;
+}
+
+pre {
+    background-color: black;
+    color: white;
+    font-family: monospace;
+    padding: 0.5em;
+    margin: 1em 0;
+    font-size: 2em;
+    line-height: 1.5em;
+    border-radius: 3px;
+    border: 1px solid #777;
+}
+
+.question section {
+    display: flex;
+    background-color: #cccc;
+    padding: 1em;
+    border-radius: 3px;
+    border: 1px solid #777;
+    justify-content: center;
+}
+
+.question section label { 
+    background-color: #eee;
+    padding: 0.5em;
+    margin: 0 auto;
+    width: 8em;
+    margin: 4px;
+    border-radius: 1em;
+    text-align: center;
+}
+.question section label span {
+    margin: 0 1em;
+    font-family: monospace;
+    font-size: 1.5em;
+}
+
+button {
+    display: block;
+    width: 75%;
+    height: 3em;
+    margin: 0 auto;
+}

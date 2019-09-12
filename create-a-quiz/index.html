@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>My Quiz</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main>
+            <h1>Glorious Javascript Quiz</h1>
+            <div class="question">
+                <h5>Question #1</h5>
+                <h2>What does the following output?</h2>
+                <pre>4 + 2</pre>
+                <section>
+                    <label class="answer"><input type="radio" name="1"><span>6</span></label>
+                    <label><input type="radio" name="1"><span>42</span></label>
+                    <label><input type="radio" name="1"><span>"6"</span></label>
+                    <label><input type="radio" name="1"><span>"42"</span></label>
+                </section>
+            </div>
+            <div class="question">
+                <h5>Question #2</h5>
+                <h2>What does the following output?</h2>
+                <pre>9 + "10"</pre>
+                <section>
+                    <label><input type="radio" name="2"><span>21</span></label>
+                    <label><input type="radio" name="2"><span>19</span></label>
+                    <label><input type="radio" name="2"><span>"19"</span></label>
+                    <label class="answer"><input type="radio" name="2"><span>"910"</span></label>
+                </section>
+            </div>
+            <div class="question">
+                <h5>Question #3</h5>
+                <h2>What does the following output?</h2>
+                <pre>0.2 + 0.2 == 0.4</pre>
+                <section>
+                    <label class="answer"><input type="radio" name="3"><span>true</span></label>
+                    <label><input type="radio" name="3"><span>false</span></label>
+                </section>
+            </div>
+            <div class="question">
+                <h5>Question #4</h5>
+                <h2>What does the following output?</h2>
+                <pre>0.1 + 0.2 == 0.3</pre>
+                <section>
+                    <label><input type="radio" name="4"><span>true</span></label>
+                    <label class="answer"><input type="radio" name="4"><span>false</span></label>
+                </section>
+            </div>
+            <button onclick="mark()">Mark Quiz</button>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
