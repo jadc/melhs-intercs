@@ -50,6 +50,10 @@ h1::after {
     max-width: 75%;
 }
 
+p {
+    display: none;
+}
+
 pre::before {
     content: "> ";
     color: #777;
