@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+* {
+    font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+h1::before {
+    display: inline-block;
+    position: relative;
+    width: 2em;
+    height: 2em;
+    content: "";
+    margin: 0 0.5em;
+    background-image: url(images/box.png);
+    background-size: 100% 100%;
+    top: 0.5em;
+}
+
+img {
+    display: block;
+    height: 30em;
+    margin: 0 auto;
+    padding: 5em;
+    box-sizing: border-box;
+    animation: pulse 1s ease-out 0s infinite alternate;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1)}
+    100% { transform: scale(1.05)}
+}
+
+button {
+    display: block;
+    margin: 1em auto;
+    line-height: 2em;
+    padding: 0 1em;
+    font-size: 2em;
+    border-radius: 1em;
+    border: 0;
+    background-color: #333;
+    color: white;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: 100ms background-color, 100ms box-shadow;
+    outline: none;
+}
+
+button:hover {
+    background-color: #444;
+}
+
+button:active {
+    background-color: #222;
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+.inv {
+    display: block;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    width: 10em;
+    border-bottom-right-radius: 1em;
+    padding: 1em;
+}
+
+.inv h2 {
+    border-bottom: 2px solid white;
+    margin: 0;
+    padding: 0.5em;
+    text-align: center;
+}
+
+.inv p, .inv span {
+    font-family: monospace;
+}
+
+input {
+    display: block;
+    width: 3em;
+    margin: 0 auto;
+    padding: 0 1em;
+    font-size: 2em;
+    text-align: center;
+}
