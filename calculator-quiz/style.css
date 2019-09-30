@@ -1,0 +1,39 @@
+html {
+    background-color: blue;
+}
+
+body {
+    background-color: white;
+    margin: 0 auto;
+    width: 600px;
+    text-align: center;
+    padding: 30px 75px;
+    font-family: sans-serif;
+    letter-spacing: .8px;
+}
+
+p {
+    font-size: 20px;
+}
+
+div.img-container {
+    height: 200px;
+}
+
+#calc-container {
+    border: 1px dotted gray;
+    padding: 15px;
+}
+
+button {
+    background-color: lightblue;
+    padding: 6px 15px;
+    font-variant: small-caps;
+}
+
+td {
+    background-color: lightcyan;
+    padding: 15px;
+    border: 2px solid black;
+    display: none;
+}
