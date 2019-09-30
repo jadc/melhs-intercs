@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Geometry</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <body>
+        <h2>Choose a shape to begin</h2>
+        <p><button onclick="choose(true)">Cone</button> <button onclick="choose(false)">Sphere</button></p>
+        <div class="img-container">
+            <center><img></center>
+        </div>
+        
+        <center>
+        <table>
+            <tr>
+                <td>
+                    <h1>CONE</h1>
+                    <p>Enter radius: <input></p>
+                    <p>Enter height: <input></p>
+                    <p><button onclick="calcCone()">Calculate Cone</button></p>
+                    <p>The cone's volume is &cong; <span>?</span></p>
+                </td>
+               
+                <td>
+                    <h1>SPHERE</h1>
+                    <p>Enter radius: <input></p>
+                    
+                    <p><button onclick="calcSphere()">Calculate Sphere</button></p>
+                    <p>The sphere's volume is &cong; <span>?</span></p>
+                </td>
+            </tr>     
+        </table>
+        </center>
+
+        <script src="script.js"></script>
+    </body>
+</html>
