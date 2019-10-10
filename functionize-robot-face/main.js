@@ -6,6 +6,26 @@ let ctx = cnv.getContext("2d");
 cnv.width = 600;
 cnv.height = 600;
 
+// Functions
+let fillCircle = (x, y, r) => {
+    ctx.beginPath();
+    ctx.arc(x, y, r, 0, 2 * Math.PI);
+    ctx.fill();
+}
+
+let strokeCircle = (x, y, r) => {
+    ctx.beginPath();
+    ctx.arc(x, y, r, 0, 2 * Math.PI);
+    ctx.stroke();
+}
+
+let line = (x1, y1, x2, y2) => {
+    ctx.beginPath();
+    ctx.moveTo(x1, y1);
+    ctx.lineTo(x2, y2);
+    ctx.stroke();
+}
+
 // Rectangle Behind Head for Ears
 ctx.fillStyle = "rgb(100, 100, 100)";
 ctx.fillRect(80, 260, 460, 80);
@@ -53,77 +73,47 @@ ctx.fillRect(100, 100, 400, 400);
 
 // Filled Circle for Left Eye Socket
 ctx.fillStyle = "rgb(235, 235, 235)";
-ctx.beginPath();
-ctx.arc(200, 250, 50, 0, 2 * Math.PI);
-ctx.fill();
+fillCircle(200, 250, 50);
 
 // Filled Circle for Right Eye Socket
-ctx.beginPath();
-ctx.arc(400, 250, 50, 0, 2 * Math.PI);
-ctx.fill();
+fillCircle(400, 250, 50);
 
 // Rectangle for Mouth
 ctx.fillRect(200, 350, 200, 60);
 
 // Horizontal Line for Teeth
 ctx.strokeStyle = "rgb(180, 180, 180)";
-ctx.beginPath();
-ctx.moveTo(200, 380);
-ctx.lineTo(400, 380);
-ctx.stroke();
+line(200, 380, 400, 380)
 
 // First Vertical Line for Teeth
-ctx.beginPath();
-ctx.moveTo(250, 350);
-ctx.lineTo(250, 410);
-ctx.stroke();
+line(250, 350, 250, 410);
 
 // Second Vertical Line for Teeth
-ctx.beginPath();
-ctx.moveTo(300, 350);
-ctx.lineTo(300, 410);
-ctx.stroke();
+line(300, 350, 300, 410);
 
 // Third Vertical Line for Teeth
-ctx.beginPath();
-ctx.moveTo(350, 350);
-ctx.lineTo(350, 410);
-ctx.stroke();
+line(350, 350, 350, 410);
 
 // Filled Circle for Left Eye
 ctx.fillStyle = "rgb(100, 100, 100)";
-ctx.beginPath();
-ctx.arc(200, 250, 30, 0, 2 * Math.PI);
-ctx.fill();
+fillCircle(200, 250, 30);
 
 // Filled Circle for Right Eye
-ctx.beginPath();
-ctx.arc(400, 250, 10, 0, 2 * Math.PI);
-ctx.fill();
+fillCircle(400, 250, 10);
 
 // Outlined Circle for Left Eye Socket
 ctx.strokeStyle = "rgb(100, 100, 100)";
-ctx.beginPath();
-ctx.arc(200, 250, 50, 0, 2 * Math.PI);
-ctx.stroke();
+strokeCircle(200, 250, 50);
 
 // Outlined Circle for Right Eye Socket
-ctx.beginPath();
-ctx.arc(400, 250, 50, 0, 2 * Math.PI);
-ctx.stroke();
+strokeCircle(400, 250, 50);
 
 // Line for Left Eyebrow
 ctx.lineWidth = 2;
-ctx.beginPath();
-ctx.moveTo(150, 180);
-ctx.lineTo(250, 180);
-ctx.stroke();
+line(150, 180, 250, 180);
 
 // Line for Right Eyebrow
-ctx.beginPath();
-ctx.moveTo(350, 160);
-ctx.lineTo(450, 180);
-ctx.stroke();
+line(150, 180, 250, 180);
 
 // Outlined Triangle for Nose
 ctx.beginPath();
