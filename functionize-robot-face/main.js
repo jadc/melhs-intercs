@@ -113,7 +113,7 @@ ctx.lineWidth = 2;
 line(150, 180, 250, 180);
 
 // Line for Right Eyebrow
-line(150, 180, 250, 180);
+line(350, 160, 450, 180);
 
 // Outlined Triangle for Nose
 ctx.beginPath();
