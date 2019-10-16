@@ -1,0 +1,57 @@
+html {
+    background-image: url('images/dice-background.jpg');
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+}
+
+body {
+    margin: 0 auto;
+    width: 800px;
+    padding: 25px 75px;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-family: 'Cormorant Unicase', serif;
+    text-align: center;
+}
+
+table {
+    font-size: 30px;
+    padding: 30px;
+}
+
+td {
+    padding: 30px;
+}
+
+#funds {
+    font-size: 40px;
+    color: green;
+    font-weight: bold;
+}
+
+button {
+    padding: 5px 15px;
+}
+
+input {
+    height: 23px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.item {
+    width: 5em;
+    height: 5em;
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+    margin: 0.25em 1em;
+    padding: 1em;
+    border-radius: 1em;
+    background-color: white;
+    border: 1px solid #aaa;
+    transition: all 100ms;
+}
+
+.item:hover {
+    transform: scale(1.1);
+    background-color: rgb(255, 200, 200);
+    box-shadow: 0 0 0em rgba(0, 0, 0, 0.25);
+}

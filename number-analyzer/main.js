@@ -19,3 +19,26 @@ function analyzeNumber() {
 
 
 // Analyze Functions
+let getSign = input => {
+    if(input > 0){
+        return "pos";
+    }else{
+        if(input == 0){
+            return "zero";
+        }else{
+            return "neg";
+        }
+    }
+}
+
+let evenOrOdd = input => {
+    if(input % 2 == 0){
+        return "even";
+    }else{
+        return "odd";
+    }
+}
+
+let multipleOf10 = input => {
+    return (input % 10 == 0);
+}
