@@ -1,5 +1,25 @@
 // STUDENT GRADE ANALYZER
 
+// My functions
+let includes = (i, a) => {
+    return a.filter(e => e == i).length > 0;
+}
+
+let minItem = a => {
+    console.log(a.sort());
+    return a.sort()[0];
+}
+
+let maxItem = a => {
+    return a.sort()[a.length - 1];
+}
+
+let arrayAverage = a => {
+    let sum = 0;
+    for(let i = 0; i < a.length; i++) sum += a[i];
+    return Math.round((sum / a.length) * 10) / 10;
+}
+
 // Set up Canvas and Graphics Context
 let cnv = document.getElementById("myCanvas");
 let ctx = cnv.getContext("2d");
