@@ -7,7 +7,13 @@ cnv.width = 800;
 cnv.height = 600;
 
 // Global Variables
-let grades = [60, 70, 45, 20, 40, 90, 100, 30, 45, 75, 40, 80];
+let grades = [];
+
+(_ => {
+    // Declare grades
+    for(let i = 0; i < 50; i++) grades.push(Math.floor(Math.random() * 100));
+})();
+
 let max = 100; // grade values should be b/t 0 and max
 
 // Main Program Loop
@@ -20,9 +26,16 @@ function draw() {
     // Drawing
     ctx.clearRect(0, 0, cnv.width, cnv.height);
 
+    // 50% Line
+    ctx.strokeStyle = "red";
+    ctx.beginPath();
+    ctx.moveTo(0, cnv.height / 2);
+    ctx.lineTo(cnv.width, cnv.height / 2);
+    ctx.stroke();
+
     // Draw Bar Graph
-    ctx.fillStyle = "orange";
     ctx.strokeStyle = "grey";
+    ctx.fillStyle = "orange";
     for (let i = 0; i < grades.length; i++) {
         // Calculate scaled bar height based on cnv.height and canvasMax
         let barHeight = grades[i] * (cnv.height / max);
@@ -51,32 +64,46 @@ function mainMenu() {
     if (selection == 'first40') {
         // Set the grade of the first student to 40.
         outputEl.innerHTML = 'First grade to 40';
+        grades[0] = 40;
     } else if (selection == 'last50') {
         // Set the grade of the last student to 50. 
         outputEl.innerHTML = 'Last grade to 50';
+        grades[grades.length - 1] = 50;
     } else if (selection == 'random100') {
         // Set the grade of a random student to 100.
         outputEl.innerHTML = 'Random grade to 100';
+        grades[Math.floor(Math.random() * grades.length)] = 100;
     } else if (selection == 'addRandom') {
         // Add a random grade between 0 and 100 to the end of the array.
         outputEl.innerHTML = 'Add random grade';
+        grades[grades.length - 1] = Math.floor(Math.random() * 100);
     } else if (selection == 'removeLast') {
         // Remove the last grade.
         outputEl.innerHTML = 'Remove the last grade';
+        grades.pop();
     } else if (selection == 'count50') {
         // Count how many grades are below 50.  Output the result.
-        outputEl.innerHTML = 'Count grades below 50';
+        outputEl.innerHTML = `There are ${grades.filter(x => x < 50).length} grades below 50`;
     } else if (selection == 'change50') {
         // Change all grades that are below 50 to be equal to 50.
         outputEl.innerHTML = 'Change low grades to 50';
+        for(let i = 0; i < grades.length; i++) if(grades[i] < 50) grades[i] = 50;
     } else if (selection == 'increase10') {
         // Increase each grade by 10%.
         outputEl.innerHTML = 'Increase all grades by 10%';
+        for(let i = 0; i < grades.length; i++){
+            grades[i] *= 1.1;
+        }
     } else if (selection == 'decrease10') {
         // Decrease each grade by 10%.
         outputEl.innerHTML = 'Decrease all grades by 10%';
+        for(let i = 0; i < grades.length; i++){
+            if(grades[i] > 0) grades[i] *= 0.9;
+        }
     } else if (selection == 'remove50') {
         // Remove all grades that are below 50.
         outputEl.innerHTML = 'Remove grades below 50';
+        // I could just do a for loop, but that isn't unreadable and fancy enough.
+        grades = grades.filter(x => x > 50);
     } 
 }
