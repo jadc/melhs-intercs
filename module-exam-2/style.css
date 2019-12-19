@@ -1,0 +1,14 @@
+body {
+    background-color: burlywood;
+}
+
+canvas {
+    border: 2px solid black;
+    margin: 0 auto;
+    background-image: url(images/spacebg.jpg);
+    background-size: 100% 100%;
+}
+
+body {
+  text-align: center;
+}
